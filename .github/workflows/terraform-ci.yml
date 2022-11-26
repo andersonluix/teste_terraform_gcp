@@ -6,6 +6,9 @@ on:
     - main
   pull_request:
 
+env:
+  VPCNAME: ${{ secrets.VPCNAME }}
+
 jobs:
   terraform:
     name: 'Terraform'
@@ -16,7 +19,7 @@ jobs:
         working-directory: IaC
 
     env:
-      vpcname: ${{ secrets.VPCNAME }}
+      VPCNAME1: ${{ secrets.VPCNAME }}
 
     steps:
     - name: Checkout
