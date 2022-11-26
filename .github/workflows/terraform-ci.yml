@@ -40,11 +40,11 @@ jobs:
       run: terraform plan -var="nome=$nome"
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-        nome: 'dev'
+        nome: ${{ secrets.VPCNAME }}
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve -var="nome=$nome"
       env: 
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-        TF_VAR_env: 'dev'
+        nome: ${{ secrets.VPCNAME }} #'dev'
