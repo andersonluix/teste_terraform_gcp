@@ -7,6 +7,6 @@ provider "google" {
 
 # VPC
 resource "google_compute_network" "vpc2" {
-  name                    =  "vpc-teste"    #${{ env.VPCNAME }}
+  name                    =  $TF_VAR_env    #${{ env.VPCNAME }}
   auto_create_subnetworks = "false"
 }
