@@ -5,6 +5,10 @@ provider "google" {
   zone    = "us-west4-a"
 }
 
+variable "nome" {
+  type = string
+}
+
 # VPC
 resource "google_compute_network" "vpc2" {
   name                    =  var.nome    #${{ env.VPCNAME }}
