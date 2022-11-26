@@ -1,3 +1,4 @@
+#VPC teste
 provider "google" {
   project = "pro-lattice-368817"
   region  = "us-west4"
