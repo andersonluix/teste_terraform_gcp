@@ -15,6 +15,9 @@ jobs:
       run:
         working-directory: IaC
 
+    env:
+      vpcname: ${{ secrets.VPCNAME }}
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2

@@ -7,6 +7,6 @@ provider "google" {
 
 # VPC
 resource "google_compute_network" "vpc2" {
-  name                    = "${{ secrets.VPCNAME }}"
+  name                    = "$vpcname"
   auto_create_subnetworks = "false"
 }
