@@ -7,6 +7,6 @@ provider "google" {
 
 # VPC
 resource "google_compute_network" "vpc2" {
-  name                    = "vpc-teste-github"
+  name                    = "${{ secrets.VPCNAME }}"
   auto_create_subnetworks = "false"
 }
